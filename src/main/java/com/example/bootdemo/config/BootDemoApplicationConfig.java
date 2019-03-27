@@ -8,4 +8,6 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class BootDemoApplicationConfig {
+    // Here any bean initialization must be placed
+    // Empty for a while
 }
