@@ -1,6 +1,5 @@
 package com.example.bootdemo.annotation;
 
-import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -32,7 +31,7 @@ public class LogMethodAspect {
 
         long executionTime = System.currentTimeMillis() - start;
 
-        logger.debug(joinPoint.getSignature() + "[type = " + logMethod.type() + "] executed in " + executionTime + "ms");
+        logger.debug("{} [type = {}] executed in {}ms  ", joinPoint.getSignature(), logMethod.type(), executionTime);
         return proceed;
     }
 }
